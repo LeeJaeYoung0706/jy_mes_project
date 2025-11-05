@@ -1,6 +1,8 @@
 package com.mes_jyproject.master.study.exceptions;
 
 import com.mes_jyproject.master.study.dto.ErrorResponseDto;
+import com.mes_jyproject.master.utils.ApiProblemResponse;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -30,13 +33,15 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
     @Order(1)
-    public ProblemDetail handleResourceNotFoundException2(ResourceNotFoundException ex, WebRequest request) {
-        ProblemDetail problemDetail = ProblemDetail.forStatus(HttpStatus.NOT_FOUND);
-        problemDetail.setTitle("Resource Not Found");
-        problemDetail.setDetail(ex.getMessage());
-        problemDetail.setProperty("timestamp", LocalDateTime.now());
-        problemDetail.setProperty("path", request.getDescription(false).replace("uri=", ""));
-        return problemDetail;
+    public ApiProblemResponse handleResourceNotFoundException2(ResourceNotFoundException ex, HttpServletRequest request) {
+        return ApiProblemResponse.builder(HttpStatus.NOT_FOUND)
+                .title("Resource Not Found")
+                .detail(ex.getMessage())
+                .instance(request.getRequestURI())
+                .path(request.getRequestURI())
+                .timestampNow()
+                .property("test", 3)
+                .build();
     }
 
     @ExceptionHandler(CustomerAlreadyExistsException.class)
