@@ -69,4 +69,11 @@ public class Response<T> implements Serializable {
         code = responseBuilder.code;
     }
 
+    public static <T> Response<T> ok(T data) {
+        return Response.<T>builder("OK", HttpStatus.OK.value()).data(data).build();
+    }
+    public static <T> Response<T> error(String msg) {
+        return Response.<T>builder(msg, HttpStatus.INTERNAL_SERVER_ERROR.value()).build();
+    }
+
 }
