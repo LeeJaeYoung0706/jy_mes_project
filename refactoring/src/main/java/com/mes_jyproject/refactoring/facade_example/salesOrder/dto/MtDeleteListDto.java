@@ -1,8 +1,9 @@
 package com.mes_jyproject.refactoring.facade_example.salesOrder.dto;
 
+import jakarta.validation.Valid;
 import lombok.Data;
 
-import javax.validation.Valid;
+
 import java.util.List;
 
 @Data
