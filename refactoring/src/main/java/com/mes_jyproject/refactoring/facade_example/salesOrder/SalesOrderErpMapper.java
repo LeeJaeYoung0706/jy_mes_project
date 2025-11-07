@@ -5,6 +5,7 @@ package com.mes_jyproject.refactoring.facade_example.salesOrder;
 import com.mes_jyproject.refactoring.facade_example.salesOrder.dto.MtDeleteDto;
 import com.mes_jyproject.refactoring.facade_example.salesOrder.dto.SearchDtDto;
 import com.mes_jyproject.refactoring.facade_example.salesOrder.dto.SearchDto;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 import java.util.Map;
@@ -33,4 +34,5 @@ public interface SalesOrderErpMapper {
     Map<String , Object> searchDeleteResult(MtDeleteDto deleteListDatum);
 
 
+    int erpInsertWithMEPMDto(MEPM_DTO mepmDto);
 }

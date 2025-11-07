@@ -1,6 +1,6 @@
 package com.mes_jyproject.refactoring.facade_example.salesOrder;
 
-import com.mes_jyproject.refactoring.facade.UploadType;
+
 import com.mes_jyproject.refactoring.facade_example.salesOrder.dto.MtDeleteListDto;
 import com.mes_jyproject.refactoring.facade_example.salesOrder.dto.SearchDtDto;
 import com.mes_jyproject.refactoring.facade_example.salesOrder.dto.SearchDto;
@@ -18,7 +18,7 @@ public class SalesOrderErpServiceShoppingMall extends AbstractSalesOrderService 
     private final SalesOrderTransactionService transactionService;
 
     @Override
-    public com.mes_jyproject.refactoring.facade.UploadType getType() {
+    public UploadType getType() {
         return UploadType.SHOPPING_MALL;
     }
 

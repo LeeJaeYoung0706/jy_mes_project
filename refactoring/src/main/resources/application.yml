@@ -1,0 +1,24 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: refactoring
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/jy_rest_api?sslmode=disable
+    username: admin1
+    password: postgresql1121
+  jasypt:
+    encryptor:
+      algorithm: PBEWithHMACSHA512AndAES_256
+      iv-generator-classname: org.jasypt.iv.RandomIvGenerator
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc.lob.non_contextual_creation: true
