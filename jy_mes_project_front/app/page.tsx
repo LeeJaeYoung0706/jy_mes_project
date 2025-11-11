@@ -1,22 +1,36 @@
 import Link from "next/link";
+import React from "react";
 
 export default function Home() {
+
+  const containerCss: React.CSSProperties = {
+      display: "flex",
+      flexWrap: "wrap",
+      backgroundColor: "var(--brand-300)",
+      width: "100%",
+      justifyContent: "center",
+      alignItems: "center",
+  };
+
+  const articleCss: React.CSSProperties = {
+    flexGrow: "1",
+    flexBasis: "200px",
+    backgroundColor: "var(--brand-300)",
+    border: "1px solid black",
+    height: "clamp(100px, 50vh, 500px)",
+    minWidth: "clamp(280px, calc(100%/3), calc(100%/3))"
+  };
+
   return (
-    <section className="mx-auto flex min-h-[calc(100vh-10rem)] w-full max-w-4xl flex-col items-center justify-center gap-10 px-2 text-center sm:px-4 md:gap-12 lg:max-w-5xl lg:px-8">
-      <div className="space-y-4 sm:space-y-6 md:space-y-8">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
-          JY MES Project
-        </h1>
-        <p className="text-base text-gray-600 sm:text-lg md:text-xl">
-          메인 페이지
-        </p>
-      </div>
-      <Link
-        href="/routes"
-        className="inline-block w-full max-w-xs rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-blue-700 sm:text-lg md:max-w-sm"
-      >
-        Routes로 이동
-      </Link>
-    </section>
+      <section style={containerCss}>
+        <article style={articleCss}></article>
+        <article style={articleCss}></article>
+        <article style={articleCss}></article>
+        <article style={articleCss}></article>
+      </section>
   );
 }
+
+
+
+

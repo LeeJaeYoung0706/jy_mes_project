@@ -28,13 +28,13 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-gray-50 text-gray-900 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}`}
       >
-        <div className="min-h-screen flex flex-col">
-          <Header />
+
+          {/*<Header />*/}
           <MainContainer>{children}</MainContainer>
           <Footer />
-        </div>
+
       </body>
     </html>
   );

@@ -7,6 +7,12 @@
   --brand-400: #9BB1FF;
   --brand-300: #BFD7FF;
   --brand-200: #E2FDFF; /* light */
+
+  --brand2-600: #1B3C53; /* primary deep */
+  --brand2-500: #234C6A;
+  --brand2-300: #456882;
+  --brand2-200: #D2C1B6;
+
 }
 
 /* 기본 리셋 및 전역 스타일 */
@@ -15,6 +21,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 
 html,
 body {
