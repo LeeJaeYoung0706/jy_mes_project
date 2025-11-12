@@ -16,7 +16,7 @@ export default function Home() {
     flexGrow: "1",
     flexBasis: "200px",
     backgroundColor: "var(--brand-300)",
-    border: "1px solid black",
+
     height: "clamp(100px, 80vh, 700px)",
     minWidth: "clamp(400px, calc(100%/3), calc(100%/3))"
   };
@@ -69,12 +69,11 @@ export default function Home() {
           <section style={containerCss}>
               <article style={articleCss}>
                   <div className="container" style={cardDivCss}>
-                      <div className="box" style={boxCss}>
+                      <div className="box box1" style={boxCss}>
                           <span style={spanCss}></span>
                           <div className="content" style={contentCss}>
-                              <h2>Card one</h2>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                  incididunt ut labore et dolore magna aliqua.</p>
+                              <h2>Lovely</h2>
+                              <p>추억공간</p>
                               <a href="#">Read More</a>
                           </div>
                       </div>
@@ -84,12 +83,11 @@ export default function Home() {
               <article style={articleCss}>
 
                   <div className="container" style={cardDivCss}>
-                      <div className="box" style={boxCss}>
+                      <div className="box box2" style={boxCss} >
                           <span style={spanCss}></span>
                           <div className="content" style={contentCss}>
-                              <h2>Card one</h2>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                  incididunt ut labore et dolore magna aliqua.</p>
+                              <h2>Portfolio</h2>
+                              <p>개발자 이재영 포트폴리오</p>
                               <a href="#">Read More</a>
                           </div>
                       </div>
@@ -100,12 +98,11 @@ export default function Home() {
               <article style={articleCss}>
 
                   <div className="container" style={cardDivCss}>
-                      <div className="box" style={boxCss}>
+                      <div className="box box3" style={boxCss}>
                           <span style={spanCss}></span>
                           <div className="content" style={contentCss}>
-                              <h2>Card two</h2>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                  incididunt ut labore et dolore magna aliqua.</p>
+                              <h2>MES</h2>
+                              <p>MES 서브 프로젝트</p>
                               <a href="#">Read More</a>
                           </div>
                       </div>
@@ -153,19 +150,19 @@ export default function Home() {
 
               }
 
-              .container .box:nth-child(1):before,
-              .container .box:nth-child(1):after {
-                  background: linear-gradient(315deg, #ffbc00, #ff0058)
+              .container .box1:nth-child(1):before,
+              .container .box1:nth-child(1):after {
+                  background: linear-gradient(400deg, var(--brand-500), var(--brand-600))
               }
 
-              .container .box:nth-child(2):before,
-              .container .box:nth-child(2):after {
-                  background: linear-gradient(315deg, #03a9f4, #ff0058)
+              .container .box2:nth-child(1):before,
+              .container .box2:nth-child(1):after {
+                  background: linear-gradient(400deg, var(--brand-600), var(--brand-500))
               }
 
-              .container .box:nth-child(3):before,
-              .container .box:nth-child(3):after {
-                  background: linear-gradient(315deg, #4dff03, #00d0ff)
+              .container .box3:nth-child(1):before,
+              .container .box3:nth-child(1):after {
+                  background: linear-gradient(400deg, var(--brand-500), var(--brand-600))
               }
 
      

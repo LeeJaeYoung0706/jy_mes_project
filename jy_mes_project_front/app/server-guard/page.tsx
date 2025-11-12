@@ -3,11 +3,11 @@ import { redirect } from "next/navigation";
 
 export default function ServerGuardPage() {
   const cookieStore = cookies();
-  const token = cookieStore.get("auth_token");
+  //const token = cookieStore.get("auth_token");
 
-  if (!token) {
-    redirect("/login?from=server-guard");
-  }
+  //if (!token) {
+ //   redirect("/login?from=server-guard");
+  //}
 
   return (
     <section className="mx-auto flex min-h-[calc(100vh-10rem)] w-full max-w-4xl flex-col justify-center gap-6 px-4">
@@ -18,7 +18,7 @@ export default function ServerGuardPage() {
         이 페이지는 서버 컴포넌트에서 쿠키를 확인하고, 인증되지 않은 경우 서버에서 바로 로그인 페이지로 리다이렉트합니다.
       </p>
       <p className="text-gray-500">
-        현재 쿠키 값: <span className="font-mono text-blue-600">{token?.value}</span>
+        {/*현재 쿠키 값: <span className="font-mono text-blue-600">{token?.value}</span>*/}
       </p>
     </section>
   );
