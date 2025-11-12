@@ -157,12 +157,12 @@ export default function Home() {
 
               .container .box2:nth-child(1):before,
               .container .box2:nth-child(1):after {
-                  background: linear-gradient(400deg, var(--brand-600), var(--brand-500))
+                  background: linear-gradient(250deg, var(--brand-400), var(--brand-500))
               }
 
               .container .box3:nth-child(1):before,
               .container .box3:nth-child(1):after {
-                  background: linear-gradient(400deg, var(--brand-500), var(--brand-600))
+                  background: linear-gradient(100deg, var(--brand-400), var(--brand-600))
               }
 
      

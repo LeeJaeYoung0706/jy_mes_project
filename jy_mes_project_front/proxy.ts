@@ -53,12 +53,12 @@ export function proxy(req: NextRequest) {
   const app = matchAppByPath(pathname);
   if (!app) return NextResponse.next(); // 메인/기타 경로는 프리패스
 
-  const token = req.cookies.get(R[app].auth)?.value;
-  if (!token && pathname !== `/${app}/login`) {
-    const to = new URL(`/${app}/login`, req.url);
-    to.searchParams.set("from", pathname);
-    return NextResponse.redirect(to);
-  }
+  // const token = req.cookies.get(R[app].auth)?.value;
+  // if (!token && pathname !== `/${app}/login`) {
+  //   const to = new URL(`/${app}/login`, req.url);
+  //   to.searchParams.set("from", pathname);
+  //   return NextResponse.redirect(to);
+  // }
   return NextResponse.next();
 }
 
