@@ -1,0 +1,20 @@
+{
+  "plugins": ["boundaries"],
+  "settings": {
+    "boundaries/elements": [
+      { "type": "route-internal", "pattern": "app/**/_components/**" }
+    ]
+  },
+  "rules": {
+    "boundaries/element-types": [2, {
+      "default": "allow",
+      "rules": [
+        {
+          "from": ["app/**"],
+          "allow": [],
+          "disallow": ["route-internal"]
+        }
+      ]
+    }]
+  }
+}
